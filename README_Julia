@@ -1,0 +1,14 @@
+
+# Setup the LSP JETLS
+
+install julia 12 with juliaup, the JETLS docs says should work with also 13, but the other LSP onl works with 12.
+
+Follow:
+[https://aviatesk.github.io/JETLS.jl/release/#index/getting-started]
+
+install with:
+
+julia -e 'using Pkg; Pkg.Apps.add(; url="https://github.com/aviatesk/JETLS.jl", rev="release")'
+
+
+
