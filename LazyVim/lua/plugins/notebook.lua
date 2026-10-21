@@ -7,7 +7,7 @@ return {
     { "<leader>x", "<cmd>lua require('notebook-navigator').run_and_move()<cr>" },
   },
   dependencies = {
-    "echasnovski/mini.comment",
+    "nvim-mini/mini.comment",
    -- "hkupty/iron.nvim", -- repl provider
      "akinsho/toggleterm.nvim", -- alternative repl provider
     -- "benlubas/molten-nvim", -- alternative repl provider

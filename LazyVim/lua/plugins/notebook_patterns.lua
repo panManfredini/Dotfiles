@@ -1,5 +1,5 @@
 return {
-  "echasnovski/mini.hipatterns",
+  "nvim-mini/mini.hipatterns",
   event = "VeryLazy",
   dependencies = { "GCBallesteros/NotebookNavigator.nvim" },
   opts = function()
