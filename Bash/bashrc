@@ -1,0 +1,22 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+#PS1='[\u@\h \W]\$ '
+PS1='[\[\e[1;32m\]\u@\h \[\e[1;34m\]\W\[\e[0m\]]\$ '
+
+#bash completion
+[[ -f /usr/share/bash-completion/bash_completion ]] && source /usr/share/bash-completion/bash_completion
+
+
+alias icat="kitten icat"
+
+eval "$(ssh-agent -s)" >/dev/null
+
+alias enter_devbox='podman start devbox; podman exec -it devbox bash'
+alias enter_ubuntubox='podman start ubuntubox; podman exec -it ubuntubox bash'

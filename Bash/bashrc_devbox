@@ -1,0 +1,48 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+    . /etc/bashrc
+fi
+
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+
+
+PS1='[\[\e[1;32m\]\u@\h \[\e[1;34m\]\W\[\e[0m\]]\$ '
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+if [ -d ~/.bashrc.d ]; then
+    for rc in ~/.bashrc.d/*; do
+        if [ -f "$rc" ]; then
+            . "$rc"
+        fi
+    done
+fi
+unset rc
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+case ":$PATH:" in
+    *:/home/dev/.juliaup/bin:*)
+        ;;
+
+    *)
+        export PATH=/home/dev/.juliaup/bin${PATH:+:${PATH}}
+        ;;
+esac
+# Tab completion for juliaup and julia channel selection
+[ -f "/home/dev/.julia/juliaup/completions/bash.sh" ] && source "/home/dev/.julia/juliaup/completions/bash.sh"
+
+# <<< juliaup initialize <<<
+
+# Adding julia/bin to path for JETLS
+export PATH=~/.julia/bin:$PATH
