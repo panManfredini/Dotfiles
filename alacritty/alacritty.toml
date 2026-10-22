@@ -1,0 +1,13 @@
+[general]
+
+import = [
+		 # "~/.config/alacritty/catppuccin-mocha.toml", 
+		 # "~/.config/alacritty/rosepine.toml" 
+		 # "~/.config/alacritty/tokionight.toml" 
+		 # "~/.config/alacritty/nord.toml" 
+		 # "~/.config/alacritty/everforest.toml" 
+		  "~/.config/alacritty/ayu-dark.toml" 
+		 # "~/.config/alacritty/gotham-default.toml" 
+		
+]
+
