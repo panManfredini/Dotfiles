@@ -265,6 +265,7 @@ hl.device({
 
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
 
+
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
@@ -323,6 +324,10 @@ hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | swappy -f -'))
 
 hl.bind(mainMod .. " + G", hl.dsp.group.toggle())
 hl.bind(mainMod .. " + TAB", hl.dsp.group.next())
+
+
+--hl.bind(mainMod.. " + SHIFT + L", hl.dsp.exec_cmd("noctalia msg session lock"))
+hl.bind("SUPER + SHIFT + L", hl.dsp.exec_cmd("noctalia msg session lock"))
 
 
 --------------------------------

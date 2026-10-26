@@ -27,6 +27,7 @@ vim.api.nvim_create_autocmd("TermOpen", {
   end,
 })
 
+----------------- keymaps ------------------
 vim.keymap.set("n", "<leader>h", function()
   local current = vim.lsp.inlay_hint.is_enabled()
   vim.lsp.inlay_hint.enable(not current)
@@ -46,5 +47,17 @@ vim.keymap.set({ "n", "i" }, "<C-k>", vim.lsp.buf.signature_help, { desc = "Sign
 vim.keymap.set("n", "<C-n>", "<Plug>(nvim.lsp.ctrl-s)", { desc = "Next signature" })
 
 -- cycle trough buffers
-vim.keymap.set("n", "<Tab>", "<Cmd>bnext<CR>", { desc = "Next buffer" })
-vim.keymap.set("n", "<S-Tab>", "<Cmd>bprevious<CR>", { desc = "Previous buffer" })
+vim.keymap.set({"n","i"}, "<C-PageDown>", "<Cmd>bnext<CR>", { desc = "Next buffer" })
+vim.keymap.set({"n","i"}, "<C-PageUp>", "<Cmd>bprevious<CR>", { desc = "Previous buffer" })
+
+-- Normal mode: Ctrl + arrows navigate windows
+vim.keymap.set('n', '<M-Left>',  '<C-w><Left>',  { desc = 'Move to left window' })
+vim.keymap.set('n', '<M-Right>', '<C-w><Right>', { desc = 'Move to right window' })
+vim.keymap.set('n', '<M-Up>',    '<C-w><Up>',    { desc = 'Move to upper window' })
+vim.keymap.set('n', '<M-Down>',  '<C-w><Down>',  { desc = 'Move to lower window' })
+
+-- Insert mode: use <C-o> so <C-w> keeps its native delete-word behavior
+vim.keymap.set('i', '<M-Left>',  '<C-o><C-w><Left>',  { desc = 'Move to left window from insert' })
+vim.keymap.set('i', '<M-Right>', '<C-o><C-w><Right>', { desc = 'Move to right window from insert' })
+vim.keymap.set('i', '<M-Up>',    '<C-o><C-w><Up>',    { desc = 'Move to upper window from insert' })
+vim.keymap.set('i', '<M-Down>',  '<C-o><C-w><Down>',  { desc = 'Move to lower window from insert' })
