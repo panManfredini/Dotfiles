@@ -61,3 +61,6 @@ vim.keymap.set('i', '<M-Left>',  '<C-o><C-w><Left>',  { desc = 'Move to left win
 vim.keymap.set('i', '<M-Right>', '<C-o><C-w><Right>', { desc = 'Move to right window from insert' })
 vim.keymap.set('i', '<M-Up>',    '<C-o><C-w><Up>',    { desc = 'Move to upper window from insert' })
 vim.keymap.set('i', '<M-Down>',  '<C-o><C-w><Down>',  { desc = 'Move to lower window from insert' })
+
+-- set bash 
+vim.opt.shell = "bash"

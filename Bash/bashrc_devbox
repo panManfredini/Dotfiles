@@ -32,15 +32,15 @@ unset rc
 # !! Contents within this block are managed by juliaup !!
 
 case ":$PATH:" in
-    *:/home/dev/.juliaup/bin:*)
+    *:"${HOME}/.juliaup/bin":*)
         ;;
 
     *)
-        export PATH=/home/dev/.juliaup/bin${PATH:+:${PATH}}
+        export PATH="${HOME}/.juliaup/bin"${PATH:+:${PATH}}
         ;;
 esac
 # Tab completion for juliaup and julia channel selection
-[ -f "/home/dev/.julia/juliaup/completions/bash.sh" ] && source "/home/dev/.julia/juliaup/completions/bash.sh"
+[ -f "${HOME}/.julia/juliaup/completions/bash.sh" ] && source "${HOME}/.julia/juliaup/completions/bash.sh"
 
 # <<< juliaup initialize <<<
 

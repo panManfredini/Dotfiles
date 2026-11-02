@@ -229,10 +229,10 @@ hl.config({
 
 hl.config({
     input = {
-        kb_layout  = "us",
-        kb_variant = "",
-        kb_model   = "",
-        kb_options = "",
+        kb_layout  = "us,us",
+        kb_variant = ",colemak_dh",
+        kb_model   = "pc104",
+        kb_options = "grp:alt_shift_toggle",
         kb_rules   = "",
 
         follow_mouse = 1,
