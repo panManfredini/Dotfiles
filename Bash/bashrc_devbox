@@ -46,3 +46,5 @@ esac
 
 # Adding julia/bin to path for JETLS
 export PATH=~/.julia/bin:$PATH
+
+export JULIA_NUM_THREADS="auto"

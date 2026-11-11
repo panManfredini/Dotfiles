@@ -1,14 +1,20 @@
 return {
-  { "saghen/blink.cmp", 
-  	opts = {
-		completion = {
-		        menu = {
-		          auto_show = true, -- disable automatic popup, manual trigger still works
-		        },
-			-- Display a preview of the selected item on the current line
-			ghost_text = { enabled = false },
-		}
-  	} 
+  {
+    "saghen/blink.cmp",
+    opts = {
+
+      keymap = {
+        ["<S-Tab>"] = { "show", "show_documentation" },
+      },
+
+      completion = {
+        menu = { auto_show = false },
+
+        ghost_text = { enabled = false },
+
+        documentation = { auto_show = false },
+      },
+    },
   },
   { "hrsh7th/nvim-cmp", enabled = false },
 }
