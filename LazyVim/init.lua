@@ -65,5 +65,10 @@ vim.keymap.set("i", "<M-Down>", "<C-o><C-w><Down>", { desc = "Move to lower wind
 -- Map <leader>c to yank into the system clipboard in normal mode
 vim.keymap.set({ "n", "v" }, "<leader>c", '"+y', { noremap = true, silent = true, desc = "Copy to system clipboard" })
 
+
+-- ctrl backspace to delete the entire word 
+vim.keymap.set({"i", "c"}, "<C-BS>", "<C-W>")
+vim.keymap.set({"i", "c"}, "<C-H>", "<C-W>")
+
 -- set bash
 vim.opt.shell = "bash"

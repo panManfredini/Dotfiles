@@ -2,7 +2,7 @@ return {
   "akinsho/toggleterm.nvim",
   version = "*",
   opts = {
-    open_mapping = [[<c-\>]],
+    open_mapping = [[<c-t>]],
     hide_numbers = false, -- hide the number column in toggleterm buffers
     direction = "vertical",
     size = function(term)

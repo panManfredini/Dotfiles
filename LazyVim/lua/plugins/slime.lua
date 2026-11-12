@@ -14,8 +14,8 @@ return {
     -- see the documentation above to learn about those options
 
     -- called MotionSend but works with textobjects as well
-    vim.keymap.set("n", "gz", "<Plug>SlimeMotionSend", { remap = true, silent = false })
-    vim.keymap.set("n", "gzz", "<Plug>SlimeLineSend", { remap = true, silent = false })
+    vim.keymap.set("n", "<leader>m", "<Plug>SlimeMotionSend", { remap = true, silent = false })
+    vim.keymap.set("n", "<leader>mm", "<Plug>SlimeLineSend", { remap = true, silent = false })
     vim.keymap.set("x", "gz", "<Plug>SlimeRegionSend", { remap = true, silent = false })
     vim.keymap.set("n", "gzc", "<Plug>SlimeConfig", { remap = true, silent = false })
   end,

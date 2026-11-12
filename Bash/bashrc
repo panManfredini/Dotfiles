@@ -18,5 +18,8 @@ alias icat="kitten icat"
 
 eval "$(ssh-agent -s)" >/dev/null
 
-alias enter_devbox='podman start devbox; podman exec -it devbox bash'
-alias enter_ubuntubox='podman start ubuntubox; podman exec -it ubuntubox bash'
+alias enter_devbox='podman start devbox-net; podman exec -it devbox-net bash'
+alias enter_ubuntubox='podman start ubuntubox-mod; podman exec -it ubuntubox-mod bash'
+
+# set terminal for remote host
+alias ssh='TERM=xterm-256color ssh'

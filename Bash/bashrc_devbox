@@ -48,3 +48,6 @@ esac
 export PATH=~/.julia/bin:$PATH
 
 export JULIA_NUM_THREADS="auto"
+
+# add python env 
+alias activate_analysis='source /home/dev/workspace/envs/analysis/bin/activate'

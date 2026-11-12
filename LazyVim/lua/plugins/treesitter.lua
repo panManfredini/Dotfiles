@@ -8,6 +8,8 @@ return {
       "lua",
       "javascript",
       "python",
+      "c",
+      "cpp"
     }
   end,
 }
