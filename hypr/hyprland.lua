@@ -189,6 +189,8 @@ hl.animation({ leaf = "zoomFactor",    enabled = true,  speed = 1,    bezier = "
 --     rounding    = 0,
 -- })
 
+
+
 -- See https://wiki.hypr.land/Configuring/Layouts/Dwindle-Layout/ for more
 hl.config({
     dwindle = {
@@ -271,6 +273,7 @@ hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 local closeWindowBind = hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 -- closeWindowBind:set_enabled(false)
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+hl.bind(mainMod .. " + C", hl.dsp.exec_cmd("org.gnome.Calculator"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
@@ -401,5 +404,21 @@ hl.window_rule({
 
     move  = "20 monitor_h-120",
     float = true,
+})
+
+hl.window_rule({
+    name = "float-gnome-calculator",
+    match = {
+        class = "^.*Calculator$"
+    },
+    float = true
+})
+
+hl.window_rule({
+    name = "float-image-viwer",
+    match = {
+        class = "^.*Loupe$"
+    },
+    float = true
 })
 
