@@ -1,8 +1,6 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
---vim.lsp.enable("julials")
-
 vim.lsp.config("jetls", {
   cmd = {
     "jetls",
@@ -14,7 +12,8 @@ vim.lsp.config("jetls", {
   root_markers = { "Project.toml" },
 })
 
-vim.lsp.enable("jetls")
+--vim.lsp.enable("jetls")
+vim.lsp.enable("julials")
 
 vim.opt.mouse = ""
 
@@ -49,6 +48,8 @@ vim.keymap.set("n", "<C-n>", "<Plug>(nvim.lsp.ctrl-s)", { desc = "Next signature
 -- cycle trough buffers
 vim.keymap.set({ "n", "i" }, "<C-PageDown>", "<Cmd>bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set({ "n", "i" }, "<C-PageUp>", "<Cmd>bprevious<CR>", { desc = "Previous buffer" })
+--vim.keymap.set({ "n", "i" }, "<M-m>", "<Cmd>bnext<CR>", { desc = "Next buffer" })
+--vim.keymap.set({ "n", "i" }, "<M-o>", "<Cmd>bprevious<CR>", { desc = "Previous buffer" })
 
 -- Normal mode: Ctrl + arrows navigate windows
 vim.keymap.set("n", "<M-Left>", "<C-w><Left>", { desc = "Move to left window" })
@@ -65,10 +66,9 @@ vim.keymap.set("i", "<M-Down>", "<C-o><C-w><Down>", { desc = "Move to lower wind
 -- Map <leader>c to yank into the system clipboard in normal mode
 vim.keymap.set({ "n", "v" }, "<leader>c", '"+y', { noremap = true, silent = true, desc = "Copy to system clipboard" })
 
-
--- ctrl backspace to delete the entire word 
-vim.keymap.set({"i", "c"}, "<C-BS>", "<C-W>")
-vim.keymap.set({"i", "c"}, "<C-H>", "<C-W>")
+-- ctrl backspace to delete the entire word
+vim.keymap.set({ "i", "c" }, "<C-BS>", "<C-W>")
+vim.keymap.set({ "i", "c" }, "<C-H>", "<C-W>")
 
 -- set bash
 vim.opt.shell = "bash"
